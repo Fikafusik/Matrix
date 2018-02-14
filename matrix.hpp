@@ -18,7 +18,7 @@ class Matrix
     Matrix(const Matrix &);
 
     ~Matrix();
-
+    // Оператор присваивания.
     Matrix &operator=(const Matrix &);
 
     Matrix &operator*=(double);
