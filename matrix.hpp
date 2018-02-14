@@ -2,33 +2,32 @@
 #ifndef __MATRIX_HPP__
 #define __MATRIX_HPP__
 
-class Matrix
-{
-  public:
-    double **mtrx;
-    int rows;
-    int cols;
-    
-    void alloc_space();
-    void dealloc_space();
+class Matrix {
+public:
+  double **mtrx;
+  int rows;
+  int cols;
 
-  public:
-    Matrix();
-    Matrix(int, int);
-    Matrix(const Matrix &);
+  void alloc_space();
+  void dealloc_space();
 
-    ~Matrix();
+public:
+  Matrix();
+  Matrix(int, int);
+  Matrix(const Matrix &);
 
-    Matrix &operator=(const Matrix &);
+  ~Matrix();
 
-    Matrix &operator*=(double);
-    Matrix &operator/=(double);
+  Matrix & operator=(const Matrix &);
 
-    Matrix &operator+=(const Matrix &);
-    Matrix &operator-=(const Matrix &);
-    Matrix &operator*=(const Matrix &);
+  Matrix & operator*=(double);
+  Matrix & operator/=(double);
 
-    Matrix transponse();
+  Matrix & operator+=(const Matrix &);
+  Matrix & operator-=(const Matrix &);
+  Matrix & operator*=(const Matrix &);
+
+  Matrix transponse();
 };
 
 Matrix operator*(const Matrix &, double);

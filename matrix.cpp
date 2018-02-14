@@ -37,6 +37,10 @@ Matrix::~Matrix() {
     dealloc_space();
 }
 
+Matrix Matrix::operator+() {
+
+}
+
 Matrix & Matrix::operator=(const Matrix &m) {
     if (this == &m)
         return *this;
@@ -95,15 +99,6 @@ Matrix Matrix::transponse() {
         for (int j = 0; j < cols; ++j)
             m.mtrx[j][i] = mtrx[i][j];
     return m;
-}
-
-double Matrix::tr() {
-    if (rows != cols)
-        return 42.0;
-    double trace = 0.0;
-    for (int i = 0; i < rows; ++i)
-        trace += mtrx[i][i];
-    return trace;
 }
 
 Matrix operator*(const Matrix &lm, double rv) {
