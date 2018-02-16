@@ -17,7 +17,10 @@ public:
   Matrix(const Matrix &);
 
   ~Matrix();
-
+  
+  Matrix operator+();
+  Matrix operator-();
+  
   Matrix & operator=(const Matrix &);
 
   Matrix & operator*=(double);

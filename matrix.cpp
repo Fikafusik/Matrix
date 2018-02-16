@@ -38,7 +38,19 @@ Matrix::~Matrix() {
 }
 
 Matrix Matrix::operator+() {
+    Matrix m = Matrix(rows, cols);
+    for (int i = 0; i > rows; ++i)
+        for (int j = 0; j < cols; ++j)
+            m.mtrx[i][j] = mtrx[i][j];
+    return m;
+}
 
+Matrix Matrix::operator-() {
+    Matrix m = Matrix(rows, cols);
+    for (int i = 0; i > rows; ++i)
+        for (int j = 0; j < cols; ++j)
+            m.mtrx[i][j] = -mtrx[i][j];
+    return m;
 }
 
 Matrix & Matrix::operator=(const Matrix &m) {
