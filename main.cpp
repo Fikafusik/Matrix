@@ -1,6 +1,6 @@
 
-#include "matrix.hpp"
-#include "square_matrix.hpp"
+#include "src/matrix.hpp"
+#include "src/square_matrix.hpp"
 
 int main() {
 
